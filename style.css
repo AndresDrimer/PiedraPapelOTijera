@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 
-h1{
+h1, p{
 font-family: 'Akshar', sans-serif;
 font-family: 'Amethysta', serif;
 text-align: center;
@@ -71,17 +71,12 @@ audio{
     border: none;
     padding: 7px;
     color: white;
-    /* position: absolute;
-    height: 33px;
-    width: 77px;
-    left: 209px;
-    top: 100px; */
     text-align: center;
 }
-#botonJugar:hover{
+#botonJugar:hover, #jugarNuevamente:hover{
     border: 1px solid black;
 }
-#botonJugar:active{
+#botonJugar:active, #jugarNuevamente:active{
     font-size: larger;
 }
 #container-flex{
@@ -114,7 +109,36 @@ audio{
     width: 80vw;
     height: 50px;  
     margin-top: 0px; 
-    background-color: #D9D9D9;
+    background-color: #D9D9D9;  
 }
 
+#cuadrado3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.nombrePunt{
+    text-decoration: underline;
+}
+#jugarNuevamente{
+    background-color: var(--celeste);
+    margin: 29px auto 0 auto;
+    
+    text-align: center;
+    padding: 7px;
+    
+    border-radius: 51px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+button{
+    color: white;
+    border: none;
+    border-radius: 51px;
+}
