@@ -2,7 +2,10 @@
 
 
 const cartas = ["piedra", "papel", "tijera"]
-const urlCartas = ["img/stone.jpg", "img/paper.jpg", "img/scissor3.jpg"]
+
+console.log(cartas)
+const urlCartasMaquina = ["img/V2/piedraMaquina.png", "img/V2/papelMaquina.png", "img/V2/tijeraMaquina.png"]
+const urlCartasJugador = ["img/V2/piedraJugador.png","img/V2/papelJugador.png","img/V2/tijeraJugador.png"]
 
 let cuadrado1 = document.querySelector("#cuadrado1")
 let cuadrado2 = document.querySelector("#cuadrado2")
@@ -14,8 +17,19 @@ boton.addEventListener("click", jugar)
 // variables declaradas
 let contadorJugador = 0
 let contadorMaquina = 0
-let nombreIngresado = prompt("ingresa tu nombre: ")
 
+let nom = document.querySelector("#inputNombre");
+const submit = document.querySelector("#submit");
+let nombreIngresado="pepito"
+
+function asignarNom() {
+  nom.value = nombreIngresado
+  return nombreIngresado
+}
+
+submit.addEventListener("click", asignarNom);
+
+console.log(nombreIngresado)
 
 function nombrar(){
   let cargaNombre = document.createElement("p")
@@ -26,8 +40,7 @@ function nombrar(){
 
 function nombrarPuntaje(){
 let cargaNombrePuntaje =document.createElement("p")
-let nombreIngresadoDosPuntos = nombreIngresado + ": "
-let nombrePje = document.createTextNode(nombreIngresadoDosPuntos)
+let nombrePje = document.createTextNode(nombreIngresado)
 cargaNombrePuntaje.appendChild(nombrePje)
 document.querySelector("#nombreJugadorPunt").appendChild(cargaNombrePuntaje)
 }
@@ -110,8 +123,8 @@ function jugar(){
     console.log("carta del jugador: " + cartaJugador + "\ncarta de la maquina: " + cartaMaquina)
     
     // asignar ruta imagen
-    cuadrado1.src=urlCartas[numJugador]
-    cuadrado2.src=urlCartas[numMaquina]
+    cuadrado1.src=urlCartasJugador[numJugador]
+    cuadrado2.src=urlCartasMaquina[numMaquina]
 
     // logica del juego -cada chico
     if (numJugador == numMaquina){

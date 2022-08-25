@@ -24,41 +24,40 @@ text-align: center;
     letter-spacing: -0.03em;
     font-style: normal;
     font-weight: 400;
-    
+    position: absolute;
+    z-index:1;
 }
 #imgFondo{
-    position: absolute;
-    width: 100%;
-    height: 60%;
-    left: 2px;
-    top: 180px;   
+    margin-top: 30%;
+    width: 70vw;
+      
 }
-
+#contieneFotoIndex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* PLAY */
 audio{
     max-width: 120px;
-    height: 20px;
-    
+    height: 20px;   
 }
+#zonaInput{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
 #tituloPlay{
-    width: 80vw;
-    margin: 29px auto 0 auto;
-    border-radius: 51px;
-    padding: 7px;
+    width: 100vw;
+    margin: 20px auto 0 auto;
     line-height: 35px;
     letter-spacing: -0.03em;
     font-style: normal;
-    font-weight: 400;
-    
-}
-#imgFondoPlay{
-    position: absolute;
-    width: 100%;
-    height: 60%;
-    left: 2px;
-    top: 180px;
-    z-index: -1;
-    
+    font-weight: 600;
+    font-size: 35px;
 }
 #divButton{
     display:flex;
@@ -69,7 +68,7 @@ audio{
     margin: 29px auto 0 auto;
     border-radius: 51px;
     border: none;
-    padding: 7px;
+    padding:  10px 20px;
     color: white;
     text-align: center;
 }
@@ -82,17 +81,43 @@ audio{
 #container-flex{
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    height: 650px;
+    width: 100vw;
     justify-content:space-around;
-    align-items: flex-end;
-    margin-top:20px;
+    align-items:space-around;
+}
+.zona{
+    display:flex;
+    flex-direction: row;
+}
+#zonaNombres{
+    justify-content:space-around;
     
 }
-#cuadrado1, #cuadrado2, #cuadrado3{
-    width: 138px;
-    height: 138px;  
-    background-color: #D9D9D9;
+#zonaManos{
+    margin-top:20px;
+    justify-content:space-between;
+}
+#cuadrado3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+    background-color: #D9D9D9; 
+}
+#puntuacionTabla{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    width: 200px;
+    height: 500px;
+}
+.tablas{
+    display: flex;
+    flex-direction: column;
 }
 .jugadorNombre, #pResultado{
     font-family: 'Akshar', sans-serif;
@@ -102,24 +127,13 @@ audio{
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    margin-bottom: -20px;
-    text-align:right;
 }
 #resultado{
     width: 80vw;
     height: 50px;  
-    margin-top: 0px; 
+    margin: auto;
     background-color: #D9D9D9;  
 }
-
-#cuadrado3{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .nombrePunt{
     text-decoration: underline;
 }

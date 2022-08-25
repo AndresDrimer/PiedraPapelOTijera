@@ -11,38 +11,56 @@
     <title>Piedra, papel o tijera</title>
 </head>
 <body id="bodyPlay">
-    
-
-    <img src="/img/fondo 2.png" alt="" id="imgFondoPlay">
     <h1 id="tituloPlay">¿PIEDRA, PAPEL O TIJERA?</h1>
-    <div id="divButton">
-        <span id="botonJugar">JUGAR</span>
+    
+    <div id="zonaInput">
+        <input type="text" id="inputNombre" placeholder="ingresa tu nombre">
+        <input type="submit" value="enviar" id="submit">
     </div>
-        <main id="container-flex">
-        <span class="jugadorNombre" id="nombreJugador"></span>
-        <img id="cuadrado1"></img>
-        <p class="jugadorNombre">máquina</p>
-        <img id="cuadrado2"></div>
-        <p class="jugadorNombre">puntaje</p>
-        <div id="cuadrado3">
-            <div>
-                <span id="nombreJugadorPunt" class="nombrePunt"></span>
-                <span id="puntJugador"></span>
-            </div>
-            <div>
-                <span class="nombrePunt">máquina: </span>
-                <span id="puntMaquina"></span>
+
+    <div id="divButton">    
+        <span id="botonJugar"> PIEDRA, PAPEL O TIJERA...<br> ¡YA! </span><br>
+    </div>
+
+    <main id="container-flex">
+        <div id="zonaNombres" class="zona">
+             <span class="jugadorNombre" id="nombreJugador"></span>
+             <p class="jugadorNombre">máquina</p>
+        </div>
+
+        <div id="zonaManos" class="zona">
+            <img id="cuadrado1"></img>
+            <img id="cuadrado2"></div>
+        </div>
+
+        <div id="zonaPuntajes" >
+            <div id="cuadrado3">
+                <p class="jugadorNombre">-planilla de parciales-</p>
+                <p>***********************</p>    
+                <div id="puntuacionTabla">
+                        <div class="tablas">
+                            <span id="nombreJugadorPunt"    class="nombrePunt"></span>
+                            <span id="puntJugador"></span>
+                        </div>
+                        <div class="tablas">
+                            <span class="nombrePunt">máquina </span>
+                            <span id="puntMaquina"></span>
+                        </div>
+                    </div>
             </div>
         </div>
+        
         <div id="resultado">
             <span id="pResultado"> <p>resultado</p>  </span>
         </div>
-        <div id="jugarNuevamente"></div>
+        
+        <div id="jugarNuevamente">
+        </div>
     </main>
     
-    <audio controls autoplay>  
+    <!-- <audio controls autoplay>  
         <source src="/sound/Jeremy Blake  Powerup  NO COPYRIGHT 8bit Music.mp3" type="audio/mpeg">
-    </audio> 
+    </audio>  -->
 
     <script src="script.js"></script>
 </body>
