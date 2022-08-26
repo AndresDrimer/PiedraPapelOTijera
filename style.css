@@ -148,10 +148,11 @@ audio{
     display:flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #54D3EF
     
     
 }
-button{
+#divButton{
     color: white;
     border: none;
     border-radius: 51px;
