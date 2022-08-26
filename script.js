@@ -27,8 +27,12 @@ function asignarNom() {
     console.log(nombreIngresado)
     nombrar() 
     nombrarPuntaje()
+    deshabilitarBoton()
 }
 
+function deshabilitarBoton(){
+  submite.disabled=true
+}
 
 function nombrar(){
   let cargaNombre = document.createElement("p")
