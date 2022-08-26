@@ -85,6 +85,7 @@ function ganarFinal(){
   ganaste.appendChild(mensajeTriunfo)
   ganaste.setAttribute("style", "background:#90ee90");
   document.querySelector("#pResultado").appendChild(ganaste)
+  sonidoWinner()
   jugarDeNuevo()
 }
 
@@ -94,6 +95,7 @@ function perderFinal(){
   perdiste.appendChild(mensajeDerrota)
   perdiste.setAttribute("style", "background:#FF6666");
   document.querySelector("#pResultado").appendChild(perdiste)
+  sonidoLoser()
   jugarDeNuevo()
 }
 
@@ -127,19 +129,44 @@ function elegirPiedra(){
   cartaJugador = cartas[0]
   cuadrado1.src=urlCartasJugador[0]
   cuadrado2.src=""
+  sonidoPlop()
 }
 function elegirPapel(){
   numJugador=1
   cartaJugador = cartas[1]
   cuadrado1.src=urlCartasJugador[1]
   cuadrado2.src=""
+  sonidoPlop()
 }
 function elegirTijera(){
   numJugador=2
   cartaJugador = cartas[2]
   cuadrado1.src=urlCartasJugador[2]
   cuadrado2.src=""
+  sonidoPlop()
 }
+
+function sonidoPlop(){
+  let audioPlop = document.querySelector("#audioPlop")
+  audioPlop.play()
+}
+
+function sonidoBow(){
+  let audioBow = document.querySelector("#audioBow")
+  audioBow.play()
+}
+
+function sonidoLoser(){
+  let audioLoser = document.querySelector("#audioLoser")
+  audioLoser.play()
+}
+
+function sonidoWinner(){
+  let audioWinner = document.querySelector("#audioWinner")
+  audioWinner.play()
+}
+
+
 
 function jugar(){
 
@@ -158,6 +185,7 @@ function jugar(){
       
       // asignar ruta imagen
       cuadrado2.src=urlCartasMaquina[numMaquina]
+      sonidoBow()
 
       // logica del juego -cada chico
       if (numJugador == numMaquina){
