@@ -22,9 +22,8 @@ let nombreIngresado=""
 let nom=""
 
 function asignarNom() {
-    let nom = document.querySelector("#inputNombre").value
+    let nom = document.querySelector("#inputNombre").value.toUpperCase()
     nombreIngresado=nom
-    console.log(nombreIngresado)
     nombrar() 
     nombrarPuntaje()
     deshabilitarBoton()
@@ -66,16 +65,17 @@ function cargarPuntajes(){
 function ganarChico(){
   contadorJugador++
   cargarPuntajes()
-  console.log("ganaste, tenes " + contadorJugador + " puntos")
 }
+
 function perderChico(){
   contadorMaquina++
   cargarPuntajes()
-  console.log("ganó la Maquina, tiene  " + contadorMaquina + " puntos")
 }
+
 function empatarChico(){
   console.log("empate")
 }
+
 function ganarFinal(){
   let ganaste = document.createElement("h1")
   let mensajeTriunfo = document.createTextNode("ganaste!!!")
@@ -84,6 +84,7 @@ function ganarFinal(){
   document.querySelector("#pResultado").appendChild(ganaste)
   jugarDeNuevo()
 }
+
 function perderFinal(){ 
   let perdiste = document.createElement("h1")
   let mensajeDerrota = document.createTextNode("perdiste ;(")
@@ -102,34 +103,57 @@ function jugarDeNuevo() {
   document.querySelector("#jugarNuevamente").appendChild(deNuevo)
   let boton=document.querySelector("#jugarNuevamente")
   boton.addEventListener("click", recargar)
-
 }
+
 function recargar(){
   window.location.reload()
 }
-// function nuevaPartida()
+
+ //  asignar carta por manito
+let numJugador=0
+let cartaJugador = ""
+let piedrita=document.querySelector("#piedrita")
+piedrita.addEventListener("click", elegirPiedra) 
+let papelito=document.querySelector("#papelito")
+papelito.addEventListener("click", elegirPapel)
+let tijerita=document.querySelector("#tijerita")
+tijerita.addEventListener("click", elegirTijera)
+
+function elegirPiedra(){
+  numJugador=0
+  cartaJugador = cartas[0]
+  cuadrado1.src=urlCartasJugador[0]
+  cuadrado2.src=""
+}
+function elegirPapel(){
+  numJugador=1
+  cartaJugador = cartas[1]
+  cuadrado1.src=urlCartasJugador[1]
+  cuadrado2.src=""
+}
+function elegirTijera(){
+  numJugador=2
+  cartaJugador = cartas[2]
+  cuadrado1.src=urlCartasJugador[2]
+  cuadrado2.src=""
+}
 
 function jugar(){
 
     if (contadorJugador <3 && contadorMaquina<3){
-      let cuadrado1 = document.getElementById('cuadrado1')
+      
       let cuadrado2 = document.getElementById('cuadrado2')
       let cuadrado3 = document.getElementById('cuadrado3')
 
       function getRandomInt(max) {
           return Math.floor(Math.random() * max);
         } 
-
-      // asignar carta al azar  
-      let numJugador = getRandomInt(3)
-      let cartaJugador = cartas[numJugador]
-        
+   
+      // asignar carta maquina al azar 
       let numMaquina = getRandomInt(3)
       let cartaMaquina = cartas[numMaquina]
-      console.log("carta del jugador: " + cartaJugador + "\ncarta de la maquina: " + cartaMaquina)
       
       // asignar ruta imagen
-      cuadrado1.src=urlCartasJugador[numJugador]
       cuadrado2.src=urlCartasMaquina[numMaquina]
 
       // logica del juego -cada chico

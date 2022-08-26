@@ -18,19 +18,36 @@
         <button id="submite">enviar</button>
     </div>
 
-    <div id="divButton">    
-        <span id="botonJugar"> PIEDRA, PAPEL O TIJERA...<br> ¡YA! </span><br>
-    </div>
-
+   
     <main id="container-flex">
-        <div id="zonaNombres" class="zona">
-             <span class="jugadorNombre" id="nombreJugador"></span>
-             <p class="jugadorNombre">máquina</p>
+        <div id="zonaInicial">
+            <div>
+                <div id="zonaBotonesManitos">
+                    <button class="botoncitoManos" id="piedrita"><img src="/img/V2/piedrita2.png" alt="piedrita" class="manitosImg"></button>
+                    <button class="botoncitoManos" id="papelito"><img src="/img/V2/papelito.png" alt="papelito" class="manitosImg"></button>
+                    <button class="botoncitoManos" id="tijerita"><img src="/img/V2/tijerita.png" alt="tijerita" class="manitosImg"></button>
+                </div> 
+                    <p id="txtElegi">Elegí tu mano! Al mejor de 3...</p>
+            </div>
+            <div id="divButtton">
+                <span id="botonJugar"> ¡YA! </span><br>
+            </div>
+        </div>
+        <div>
+           
         </div>
 
         <div id="zonaManos" class="zona">
             <img id="cuadrado1"></img>
             <img id="cuadrado2"></div>
+        </div>
+        <div id="zonaNombres" class="zona">
+             <span class="jugadorNombre" id="nombreJugador"></span>
+             <p class="jugadorNombre">MÁQUINA</p>
+        </div>
+        
+        <div id="resultado">
+            <span id="pResultado"></span>
         </div>
 
         <div id="zonaPuntajes" >
@@ -43,16 +60,14 @@
                             <span id="puntJugador"></span>
                         </div>
                         <div class="tablas">
-                            <span class="nombrePunt">máquina </span>
+                            <span class="nombrePunt">MÁQUINA</span>
                             <span id="puntMaquina"></span>
                         </div>
                     </div>
             </div>
         </div>
         
-        <div id="resultado">
-            <span id="pResultado"> <p>resultado</p>  </span>
-        </div>
+        
         
         <div id="jugarNuevamente">
         </div>

@@ -46,10 +46,15 @@ audio{
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
-
-
+#zonaInicial{
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+    justify-content: space-around;
+    align-items: center;
+}    
 #tituloPlay{
     width: 100vw;
     margin: 20px auto 0 auto;
@@ -59,21 +64,27 @@ audio{
     font-weight: 600;
     font-size: 35px;
 }
-#divButton{
-    display:flex;
-    justify-content: center;
+
+.manitosImg:hover{
+    border: 2px solid #54D3EF;
+}
+.botoncitoManos{
+    background-color: white;
+}
+button{
+    border:none;
 }
 #botonJugar{
     background-color: var(--celeste);
-    margin: 29px auto 0 auto;
+    margin: 9px auto 0 auto;
     border-radius: 51px;
     border: none;
     padding:  10px 20px;
     color: white;
-    text-align: center;
+   
 }
 #botonJugar:hover, #jugarNuevamente:hover{
-    border: 1px solid black;
+    border: 1px solid var(--celeste);
 }
 #botonJugar:active, #jugarNuevamente:active{
     font-size: larger;
@@ -89,8 +100,19 @@ audio{
     display:flex;
     flex-direction: row;
 }
+#zonaBotonesManitos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 #zonaNombres{
     justify-content:space-around;
+    
+}
+#txtElegi{
+    text-align: left;
+    font-size: 10px;
     
 }
 #zonaManos{
@@ -132,23 +154,21 @@ audio{
     width: 80vw;
     height: 50px;  
     margin: auto;
-    background-color: #D9D9D9;  
+    /* background-color: #D9D9D9;   */
 }
 .nombrePunt{
     text-decoration: underline;
 }
 #jugarNuevamente{
     background-color: var(--celeste);
-    margin: 29px auto 0 auto;
-    
+    margin: 0 auto;
     text-align: center;
-    padding: 7px;
-    
+    padding: 12px;
     border-radius: 51px;
     display:flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #54D3EF
+    border: 1px solid #54D3EF;
     
     
 }
@@ -173,11 +193,17 @@ audio{
     margin-top: 20px;
 }
 #zonaManos{
-    
-    justify-content:space-around;
+    justify-content:space-around; 
+}
+#container-flex{
+   margin:auto;
+   width: 80vw;
 }
 #resultado{
     width: 40vw;
+}
+#txtElegi{
+    font-size: 12px;
 }
 /* tablet */
 /* @media screen and (max-width: 1440px) and (min-width: 768px){} */
