@@ -157,3 +157,28 @@ audio{
     border: none;
     border-radius: 51px;
 }
+
+
+/* RESPONSIVE */
+/* pc escritorio */
+@media screen and (min-width: 1440px){
+#imgFondo{
+    margin-top: 50px;
+    width: 30%;
+}
+#tituloPlay{
+    margin-top: 50px;
+}
+#divButton{
+    margin-top: 20px;
+}
+#zonaManos{
+    
+    justify-content:space-around;
+}
+#resultado{
+    width: 40vw;
+}
+/* tablet */
+/* @media screen and (max-width: 1440px) and (min-width: 768px){} */
+}
