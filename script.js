@@ -21,16 +21,19 @@ submite.addEventListener("click", asignarNom)
 let nombreIngresado=""
 let nom=""
 
+let inpute=document.querySelector("#inputNombre")
+
 function asignarNom() {
     let nom = document.querySelector("#inputNombre").value.toUpperCase()
     nombreIngresado=nom
     nombrar() 
     nombrarPuntaje()
-    deshabilitarBoton()
+    desaparecerInput()
 }
 
-function deshabilitarBoton(){
-  submite.disabled=true
+function desaparecerInput(){
+  inpute.setAttribute("style", "display:none");
+  submite.setAttribute("style", "display:none");
 }
 
 function nombrar(){
