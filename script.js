@@ -22,6 +22,7 @@ let nombreIngresado=""
 let nom=""
 
 let inpute=document.querySelector("#inputNombre")
+let zonaPuntajes = document.querySelector("#zonaPuntajes")
 
 function asignarNom() {
     let nom = document.querySelector("#inputNombre").value.toUpperCase()
@@ -29,11 +30,16 @@ function asignarNom() {
     nombrar() 
     nombrarPuntaje()
     desaparecerInput()
+    aparecerPuntajes()
 }
 
 function desaparecerInput(){
   inpute.setAttribute("style", "display:none");
   submite.setAttribute("style", "display:none");
+}
+
+function aparecerPuntajes(){
+  zonaPuntajes.setAttribute("style", "display:flex")
 }
 
 function nombrar(){

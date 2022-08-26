@@ -119,6 +119,9 @@ button{
     margin-top:20px;
     justify-content:space-between;
 }
+#zonaPuntajes{
+    display:none;
+}
 #cuadrado3{
     display:flex;
     flex-direction: column;
