@@ -135,13 +135,16 @@ function elegirPiedra(){
   cartaJugador = cartas[0]
   cuadrado1.src=urlCartasJugador[0]
   cuadrado2.src=""
+  boton.setAttribute("style", "background:#54D3EF");
   sonidoPlop()
+
 }
 function elegirPapel(){
   numJugador=1
   cartaJugador = cartas[1]
   cuadrado1.src=urlCartasJugador[1]
   cuadrado2.src=""
+  boton.setAttribute("style", "background:#54D3EF");
   sonidoPlop()
 }
 function elegirTijera(){
@@ -149,6 +152,7 @@ function elegirTijera(){
   cartaJugador = cartas[2]
   cuadrado1.src=urlCartasJugador[2]
   cuadrado2.src=""
+  boton.setAttribute("style", "background:#54D3EF");
   sonidoPlop()
 }
 
@@ -177,7 +181,7 @@ function sonidoWinner(){
 function jugar(){
 
     if (contadorJugador <3 && contadorMaquina<3){
-      
+      boton.setAttribute("style", "background:#D9D9D9");
       let cuadrado2 = document.getElementById('cuadrado2')
       let cuadrado3 = document.getElementById('cuadrado3')
 
